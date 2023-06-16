@@ -66,6 +66,11 @@ resource "azurerm_role_assignment" "aks_admin_role" {
   delegated_managed_identity_resource_id = lookup(each.value, "delegated_managed_identity_resource_id", null)
   description                            = lookup(each.value, "description", null)
   skip_service_principal_aad_check       = lookup(each.value, "skip_service_principal_aad_check", null)
+  lifecycle {
+    ignore_changes = [
+      scope
+    ]
+  }
 }
 
 resource "azurerm_role_assignment" "aks_monitoring_user" {
@@ -82,6 +87,11 @@ resource "azurerm_role_assignment" "aks_monitoring_user" {
   delegated_managed_identity_resource_id = lookup(each.value, "delegated_managed_identity_resource_id", null)
   description                            = lookup(each.value, "description", null)
   skip_service_principal_aad_check       = lookup(each.value, "skip_service_principal_aad_check", null)
+  lifecycle {
+    ignore_changes = [
+      scope
+    ]
+  }
 }
 
 resource "azurerm_role_assignment" "aks_contributor_role" {
@@ -98,6 +108,11 @@ resource "azurerm_role_assignment" "aks_contributor_role" {
   delegated_managed_identity_resource_id = lookup(each.value, "delegated_managed_identity_resource_id", null)
   description                            = lookup(each.value, "description", null)
   skip_service_principal_aad_check       = lookup(each.value, "skip_service_principal_aad_check", null)
+  lifecycle {
+    ignore_changes = [
+      scope
+    ]
+  }
 }
 
 resource "azurerm_role_assignment" "aks_rbac_admin" {
@@ -114,6 +129,11 @@ resource "azurerm_role_assignment" "aks_rbac_admin" {
   delegated_managed_identity_resource_id = lookup(each.value, "delegated_managed_identity_resource_id", null)
   description                            = lookup(each.value, "description", null)
   skip_service_principal_aad_check       = lookup(each.value, "skip_service_principal_aad_check", null)
+  lifecycle {
+    ignore_changes = [
+      scope
+    ]
+  }
 }
 
 resource "azurerm_role_assignment" "aks_rbac_cluster_admin" {
@@ -130,6 +150,11 @@ resource "azurerm_role_assignment" "aks_rbac_cluster_admin" {
   delegated_managed_identity_resource_id = lookup(each.value, "delegated_managed_identity_resource_id", null)
   description                            = lookup(each.value, "description", null)
   skip_service_principal_aad_check       = lookup(each.value, "skip_service_principal_aad_check", null)
+  lifecycle {
+    ignore_changes = [
+      scope
+    ]
+  }
 }
 
 resource "azurerm_role_assignment" "aks_rbac_reader" {
@@ -146,6 +171,11 @@ resource "azurerm_role_assignment" "aks_rbac_reader" {
   delegated_managed_identity_resource_id = lookup(each.value, "delegated_managed_identity_resource_id", null)
   description                            = lookup(each.value, "description", null)
   skip_service_principal_aad_check       = lookup(each.value, "skip_service_principal_aad_check", null)
+  lifecycle {
+    ignore_changes = [
+      scope
+    ]
+  }
 }
 
 resource "azurerm_role_assignment" "aks_rbac_writer" {
@@ -162,4 +192,9 @@ resource "azurerm_role_assignment" "aks_rbac_writer" {
   delegated_managed_identity_resource_id = lookup(each.value, "delegated_managed_identity_resource_id", null)
   description                            = lookup(each.value, "description", null)
   skip_service_principal_aad_check       = lookup(each.value, "skip_service_principal_aad_check", null)
+  lifecycle {
+    ignore_changes = [
+      scope
+    ]
+  }
 }

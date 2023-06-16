@@ -31,7 +31,7 @@ Using the Kubernetes RBAC, you have only to grant reader permissions on the CSP'
 
 | Module Version | Terraform Version | AzureRM Version |
 |----------------|-------------------| --------------- |
-| v1.0.0         | v1.3.6            | 3.37.0          |
+| v1.0.0         | v1.4.6            | 3.60.0          |
 ## Specifying a version
 
 To avoid that your code get updates automatically, is mandatory to set the version using the `source` option. 
